@@ -15,7 +15,7 @@ That are classes that keeps track of a lot of information and have several respo
 One code change will most likely affect other parts of the class and therefore indirectly all other classes that uses it.
 That in turn leads to an even bigger maintenance mess since no one dares to do any changes other than adding new functionality to it.
 
-### How to Recognize a Break of the SRP?
+### How to recognize a break of the SRP?
 
 #### Method/constructor Has Too Many Parameters
 Too many paramaters are passed to constructor or method.
@@ -60,3 +60,22 @@ If a change in the code to add a new feature or simply refactor broke a test whi
 
 #### Shotgun Effect
 If a small change makes a big ripple in your code. If you need to change many locations it might suggest, among other smells, that the SRP is broken.
+
+### How to work compliant to the Single Responsibility Principle?
+
+### Awareness
+This is a general suggestion for clean code. We need to be aware of our code. We need to take care.
+As for SRP, we need to try and catch as early as we can a class that is responsible for too much.
+We need to always look for a ‘too big method’.
+
+### Testable Code
+Test-Driven-Developement - special topic on its own!
+
+### Code Coverage Metrics
+Sometimes, when a class does too much, it won’t have 100% coverage at first shot.
+Check the code quality metrics.
+
+### Refactoring and Design Patterns
+For SRP, we’ll mostly do extract-method, extract-class, move-method. Constantly refactor your code! See [Boy Scout Rule][57bd0231]
+
+  [57bd0231]: https://clean-code-developer.com/grades/grade-1-red/#Boy_Scout_Rule "Boy Scout Rule"
