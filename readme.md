@@ -1,5 +1,15 @@
 # SOLID
 
+- **S stands for SRP - Single responsibility principle**
+
+- **O stands for OCP - Open closed principle**
+
+- **L stands for LSP - Liskov substitution principle**
+
+- **I stand for ISP - Interface segregation principle**
+
+- **D stands for DIP - Dependency inversion principle**
+
 ## Single Responsibility Principle
 - Related concepts:
   - Coupling - Coupling refers to how inextricably linked different aspects of an application are
@@ -28,7 +38,10 @@ Too many paramaters are passed to constructor or method.
   - Triadic - Method with 3 arguments. Example StringBuffer's replace method.... `replace(int start, int end, String str)`
   - Polyadic - A method that for some reason has more than 3 arguments
 
-**_AVOID POLYADICS! TRIADICS JUST IN EXCEPTIONS!_**
+_**REMEMBER THAT:**_
+- **_Prefer Niladics, Monadic and Dyadics!_**
+- **_Triadics just when it's really necessary!_**
+- **_Avoid Polyadics!_**
 
 #### The Test Class Becomes Too Complicated
 If the test has too many variants, it might suggest that the class has too many responsibilities. It might suggest that some methods do too much.
@@ -37,17 +50,20 @@ If the test has too many variants, it might suggest that the class has too many 
 #### Class / Method is Long
 If a method is long, it might suggest it does too much. Same goes for a class.
 My rule of thumb:
-  - A class should not exceed 50-70 LOC. Imports included ;-)
-  - A method should not exceed 10-20 LOC.
+- A class should not exceed 50-70 LOC. Imports included ;-)
+- A method should not exceed 10-20 LOC.
 
-**When you think a class/method is small, it must be smaller!**
+_**REMEMBER THAT:**_
+- **When you think a class/method is small, it can be smaller!**
+- **Big is bad, small is good...**
 
 
 #### Descriptive Naming
 If you need to describe what your class / method / package is doing with the AND/OR world, it probably breaks the SRP.
 Example is a class that registers a user and send an email (class name would be `register_user_AND_send_email`)
 
-**When you need AND/OR to describe a class or method, it breaks SRP!**
+_**REMEMBER THAT:**_
+- **When you need AND/OR to describe a class or method, it might breaks SRP!**
 
 #### Class With Low Cohesion
 Cohesion is an important topic of its own and should have its own post. But Cohesion and SRP are closely related and it is important to mention it here.
